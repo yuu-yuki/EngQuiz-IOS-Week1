@@ -12,6 +12,13 @@
 		ACFD183521A23E4000ED40F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFD183321A23E4000ED40F8 /* Main.storyboard */; };
 		ACFD183721A23E4200ED40F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACFD183621A23E4200ED40F8 /* Assets.xcassets */; };
 		ACFD183A21A23E4200ED40F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFD183821A23E4200ED40F8 /* LaunchScreen.storyboard */; };
+		ACFD184721A25A2500ED40F8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD184621A25A2500ED40F8 /* Question.swift */; };
+		ACFD184921A25A4500ED40F8 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD184821A25A4500ED40F8 /* QuestionBank.swift */; };
+		ACFD184B21A25A5D00ED40F8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD184A21A25A5D00ED40F8 /* Game.swift */; };
+		ACFD184D21A2651200ED40F8 /* M1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD184C21A2651200ED40F8 /* M1ViewController.swift */; };
+		ACFD184F21A2652B00ED40F8 /* M2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD184E21A2652B00ED40F8 /* M2ViewController.swift */; };
+		ACFD185121A2654300ED40F8 /* M3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD185021A2654300ED40F8 /* M3ViewController.swift */; };
+		ACFD185321A2655C00ED40F8 /* M4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFD185221A2655C00ED40F8 /* M4ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		ACFD183621A23E4200ED40F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACFD183921A23E4200ED40F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACFD183B21A23E4200ED40F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACFD184621A25A2500ED40F8 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		ACFD184821A25A4500ED40F8 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		ACFD184A21A25A5D00ED40F8 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		ACFD184C21A2651200ED40F8 /* M1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M1ViewController.swift; sourceTree = "<group>"; };
+		ACFD184E21A2652B00ED40F8 /* M2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M2ViewController.swift; sourceTree = "<group>"; };
+		ACFD185021A2654300ED40F8 /* M3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M3ViewController.swift; sourceTree = "<group>"; };
+		ACFD185221A2655C00ED40F8 /* M4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = M4ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,45 @@
 		ACFD182E21A23E4000ED40F8 /* PhucCKEngQuizz */ = {
 			isa = PBXGroup;
 			children = (
-				ACFD182F21A23E4000ED40F8 /* AppDelegate.swift */,
-				ACFD183121A23E4000ED40F8 /* ViewController.swift */,
-				ACFD183321A23E4000ED40F8 /* Main.storyboard */,
-				ACFD183621A23E4200ED40F8 /* Assets.xcassets */,
-				ACFD183821A23E4200ED40F8 /* LaunchScreen.storyboard */,
 				ACFD183B21A23E4200ED40F8 /* Info.plist */,
+				ACFD183621A23E4200ED40F8 /* Assets.xcassets */,
+				ACFD184121A23F6900ED40F8 /* Model */,
+				ACFD184221A23F8200ED40F8 /* View */,
+				ACFD184321A23F8C00ED40F8 /* Controller */,
 			);
 			path = PhucCKEngQuizz;
+			sourceTree = "<group>";
+		};
+		ACFD184121A23F6900ED40F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACFD184621A25A2500ED40F8 /* Question.swift */,
+				ACFD184821A25A4500ED40F8 /* QuestionBank.swift */,
+				ACFD184A21A25A5D00ED40F8 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACFD184221A23F8200ED40F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACFD183321A23E4000ED40F8 /* Main.storyboard */,
+				ACFD183821A23E4200ED40F8 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACFD184321A23F8C00ED40F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACFD182F21A23E4000ED40F8 /* AppDelegate.swift */,
+				ACFD183121A23E4000ED40F8 /* ViewController.swift */,
+				ACFD184C21A2651200ED40F8 /* M1ViewController.swift */,
+				ACFD184E21A2652B00ED40F8 /* M2ViewController.swift */,
+				ACFD185021A2654300ED40F8 /* M3ViewController.swift */,
+				ACFD185221A2655C00ED40F8 /* M4ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFD185321A2655C00ED40F8 /* M4ViewController.swift in Sources */,
+				ACFD185121A2654300ED40F8 /* M3ViewController.swift in Sources */,
+				ACFD184721A25A2500ED40F8 /* Question.swift in Sources */,
+				ACFD184B21A25A5D00ED40F8 /* Game.swift in Sources */,
+				ACFD184921A25A4500ED40F8 /* QuestionBank.swift in Sources */,
+				ACFD184F21A2652B00ED40F8 /* M2ViewController.swift in Sources */,
 				ACFD183221A23E4000ED40F8 /* ViewController.swift in Sources */,
+				ACFD184D21A2651200ED40F8 /* M1ViewController.swift in Sources */,
 				ACFD183021A23E4000ED40F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
