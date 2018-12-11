@@ -40,4 +40,8 @@ class Game {
         gameLevel = inGameLevel
         gameScore = inGameScore
     }
+    
+    init() {
+        
+    }
 }

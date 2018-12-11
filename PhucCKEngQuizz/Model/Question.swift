@@ -11,7 +11,7 @@ import UIKit
 
 class Question {
     let questionImage : UIImage
-    let  questionAnswerArr : [String]
+    let questionAnswerArr : [String]
     let questionAnswerTrue : String
     
     init(inQuestionImage : UIImage , inQuestionAnswerArr : [String], inQuestionAnswerTrue : String) {

@@ -264,7 +264,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001-dog" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-WD-g08">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animal" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-WD-g08">
                                         <rect key="frame" x="0.0" y="55" width="355" height="276"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Juj-j2-nzw">
@@ -276,6 +276,9 @@
                                                 <state key="normal" title="Bee">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onChooseAnswer:" destination="g8f-sM-ovJ" eventType="touchUpInside" id="YL3-4l-Ws2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjb-qg-5Bd">
                                                 <rect key="frame" x="0.0" y="71.5" width="355" height="61.5"/>
@@ -283,6 +286,9 @@
                                                 <state key="normal" title="Fly">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onChooseAnswer:" destination="g8f-sM-ovJ" eventType="touchUpInside" id="iHj-nu-SMX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4X-64-zzK">
                                                 <rect key="frame" x="0.0" y="143" width="355" height="61.5"/>
@@ -290,6 +296,9 @@
                                                 <state key="normal" title="Bug">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onChooseAnswer:" destination="g8f-sM-ovJ" eventType="touchUpInside" id="I1X-yX-E5g"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGj-F8-P2A">
                                                 <rect key="frame" x="0.0" y="214.5" width="355" height="61.5"/>
@@ -297,6 +306,9 @@
                                                 <state key="normal" title="Butterfly">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onChooseAnswer:" destination="g8f-sM-ovJ" eventType="touchUpInside" id="rEy-Rf-9zE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -348,6 +360,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K0u-Uq-jwJ"/>
                     </view>
+                    <connections>
+                        <outlet property="imgQuestion" destination="2D3-WD-g08" id="8as-Y6-BHB"/>
+                        <outlet property="lbCurrentQuestion" destination="bZn-cj-w1l" id="C2U-nR-QLq"/>
+                        <outlet property="lbQuizzTime" destination="la9-qg-Hv3" id="xwC-wt-ays"/>
+                        <outlet property="lbScore" destination="2YG-2t-hKk" id="uWd-t6-z8P"/>
+                        <outletCollection property="btnAnswer" destination="Rpt-06-9y1" collectionClass="NSMutableArray" id="OM8-sW-7w3"/>
+                        <outletCollection property="btnAnswer" destination="vjb-qg-5Bd" collectionClass="NSMutableArray" id="IlT-E4-oLH"/>
+                        <outletCollection property="btnAnswer" destination="p4X-64-zzK" collectionClass="NSMutableArray" id="nun-OF-csu"/>
+                        <outletCollection property="btnAnswer" destination="qGj-F8-P2A" collectionClass="NSMutableArray" id="Bms-T4-Ktt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeO-dP-lGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,7 +378,7 @@
         <!--View Controller-->
         <scene sceneID="BbR-vV-UdW">
             <objects>
-                <viewController id="KOK-tY-0XS" customClass="M4ViewController" customModule="PhucCKEngQuizz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="endGameView" id="KOK-tY-0XS" customClass="M4ViewController" customModule="PhucCKEngQuizz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZOd-Xy-ffi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -472,7 +494,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="001-dog" width="256" height="256"/>
+        <image name="animal" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fJ4-Q3-dAB"/>
