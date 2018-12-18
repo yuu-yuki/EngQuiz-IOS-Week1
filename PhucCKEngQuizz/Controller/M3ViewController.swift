@@ -49,16 +49,13 @@ class M3ViewController: UIViewController {
     @objc func gameTimerTick() {
         gameTime -= 1
         lbQuizzTime.text = "Quizz Time: \(gameTime)"
+        //Dem nguoc thoi gian Game. het thoi gian ket thuc
         if gameTime == 0 {
             gameTimer.invalidate()
-            gameOver()
+            goToEndGameView()
         }
     }
     
-    func gameOver(){
-        
-    }
-
     @IBAction func onChooseAnswer(_ sender: UIButton) {
         let userAnswer = sender.titleLabel?.text!
         if userAnswer == questionBank.questionList[questionIndex].questionAnswerTrue {
@@ -68,13 +65,12 @@ class M3ViewController: UIViewController {
         }
         
         questionIndex += 1
-        
+        //code chuyen man hinh khi tra loi het cau hoi
         if questionIndex == gl.totalQuestion {
-            let endGameView = UIStoryboard.init().instantiateViewController(withIdentifier: "endGameView")
-            self.present(endGameView, animated: true, completion: nil)
+            goToEndGameView()
+        } else {
+            loadScreen()
         }
-        
-        loadScreen()
     }
     
     private func loadScreen() {
@@ -85,4 +81,13 @@ class M3ViewController: UIViewController {
             btnAnswer[answerIndex].setTitle(questionBank.questionList[questionIndex].questionAnswerArr[answerIndex], for: .normal)
         }
     }
+    
+    private func goToEndGameView(){
+        //Truyen du lieu diem so
+        let us = UserDefaults.standard
+        us.set(score, forKey: "GAME_SCORE")
+        let m4ViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "endGameView") as! M4ViewController
+        self.present(m4ViewController, animated: true, completion: nil)
+    }
+
 }

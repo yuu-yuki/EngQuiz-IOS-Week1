@@ -439,6 +439,7 @@
                                         </state>
                                         <connections>
                                             <action selector="RestartGame:" destination="KOK-tY-0XS" eventType="touchUpInside" id="tbf-09-yuO"/>
+                                            <segue destination="WvZ-iC-36p" kind="show" id="mV8-m2-db7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -487,10 +488,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cUr-a7-YSK"/>
                     </view>
+                    <connections>
+                        <outlet property="lbEasyHighScore" destination="scX-wr-gJV" id="AIs-yd-E7n"/>
+                        <outlet property="lbGameLv" destination="6le-nE-IF8" id="xka-ZX-kp3"/>
+                        <outlet property="lbGameScore" destination="9Yw-sn-vIr" id="ARa-fT-pb3"/>
+                        <outlet property="lbHardHighScore" destination="orb-fR-BdH" id="Z6V-bd-Spl"/>
+                        <outlet property="lbMediumHighScore" destination="eP1-4K-Rew" id="CJh-1o-ArN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RoT-8r-SpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1743" y="68"/>
+            <point key="canvasLocation" x="390" y="-705"/>
         </scene>
     </scenes>
     <resources>
